@@ -7,8 +7,6 @@
   <img src="https://img.shields.io/github/license/anderfernandes/astral?style=flat-square" />
 </p>
 
-<hr />
-
 <!--<p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
