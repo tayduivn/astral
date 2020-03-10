@@ -30,6 +30,8 @@ class CreateSalesGradesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sale_grades');
+        // We are droping this table in the migration for the grades table
+        // because we need to disable foregin keys contraints in order to delete
+        // this table
     }
 }

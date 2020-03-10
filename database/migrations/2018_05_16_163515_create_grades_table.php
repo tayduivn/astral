@@ -30,6 +30,8 @@ class CreateGradesTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('sale_grade');
         Schema::dropIfExists('grades');
     }
 }
