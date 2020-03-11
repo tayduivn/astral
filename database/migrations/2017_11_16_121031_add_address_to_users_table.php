@@ -13,16 +13,17 @@ class AddAddressToUsersTable extends Migration
      */
     public function up()
     {
-      if (Schema::hasTable('users'))
-        Schema::table('users', function (Blueprint $table) {
-          $table->string('address')->default("Your address");
-          $table->string('city')->default("Your city");
-          $table->string('state')->default("Texas");
-          $table->string('zip')->default('76549');
-          $table->string('country')->default("United States");
-          $table->string('phone')->default("(555) 555-5555");
-          $table->boolean('active')->default(false);
-        });
+        if (Schema::hasTable('users')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->string('address')->default("Your address");
+                $table->string('city')->default("Your city");
+                $table->string('state')->default("Texas");
+                $table->string('zip')->default('76549');
+                $table->string('country')->default("United States");
+                $table->string('phone')->default("(555) 555-5555");
+                $table->boolean('active')->default(false);
+            });
+        }
     }
 
     /**
@@ -32,9 +33,10 @@ class AddAddressToUsersTable extends Migration
      */
     public function down()
     {
-      if (Schema::hasTable('users'))
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['address', 'city', 'state', 'zip', 'country', 'phone']);
-        });
+        if (Schema::hasTable('users')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn(['address', 'city', 'state', 'zip', 'country', 'phone']);
+            });
+        }
     }
 }

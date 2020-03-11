@@ -14,9 +14,9 @@ class AddStaffToRolesTable extends Migration
     public function up()
     {
         if (Schema::hasTable('roles')) {
-          Schema::table('roles', function (Blueprint $table) {
-            $table->boolean('staff')->default(false);
-          });
+            Schema::table('roles', function (Blueprint $table) {
+                $table->boolean('staff')->default(false);
+            });
         }
     }
 
@@ -27,9 +27,10 @@ class AddStaffToRolesTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('roles'))
-          Schema::table('roles', function (Blueprint $table) {
-              $table->dropColumn('staff');
-          });
+        if (Schema::hasTable('roles')) {
+            Schema::table('roles', function (Blueprint $table) {
+                $table->dropColumn('staff');
+            });
+        }
     }
 }

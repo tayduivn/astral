@@ -15,11 +15,11 @@ class Announcement extends Model
 
     /**
      * Gets the user who created an event.
-     * 
+     *
      * @return App\User Returns an instance of the App\User model
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }

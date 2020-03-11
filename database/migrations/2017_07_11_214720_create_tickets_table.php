@@ -23,7 +23,6 @@ class CreateTicketsTable extends Migration
             $table->integer('cashier_id')->unsigned();
             $table->foreign('cashier_id')->references('id')->on('users');
             $table->timestamps();
-
         });
     }
 

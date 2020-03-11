@@ -25,11 +25,10 @@ class AddRefundedToPaymentsTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('payments'))
-        {
-          Schema::table('payments', function (Blueprint $table) {
-              $table->dropColumn('refunded');
-          });
+        if (Schema::hasTable('payments')) {
+            Schema::table('payments', function (Blueprint $table) {
+                $table->dropColumn('refunded');
+            });
         }
     }
 }

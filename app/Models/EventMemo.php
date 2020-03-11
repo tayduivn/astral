@@ -22,7 +22,7 @@ class EventMemo extends Model
      */
     public function event()
     {
-      return $this->belongsTo('App\Models\Event');
+        return $this->belongsTo('App\Models\Event');
     }
 
     /**
@@ -32,6 +32,6 @@ class EventMemo extends Model
      */
     public function author()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }

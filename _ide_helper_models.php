@@ -95,6 +95,38 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\MemberType
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $description
+ * @property int $duration
+ * @property float|null $price
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $max_secondaries
+ * @property int $creator_id
+ * @property float|null $secondary_price
+ * @property-read \App\User $creator
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereCreatorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereDuration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereMaxSecondaries($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereSecondaryPrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\MemberType whereUpdatedAt($value)
+ */
+	class MemberType extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\PaymentMethod
  *
  * @property int $id
@@ -367,6 +399,41 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ShowType whereUpdatedAt($value)
  */
 	class ShowType extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Member
+ *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon $start
+ * @property \Illuminate\Support\Carbon $end
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $member_type_id
+ * @property int $creator_id
+ * @property int $primary_id
+ * @property-read \App\User $creator
+ * @property-read bool $expired
+ * @property-read string $number
+ * @property-read \[type] $users
+ * @property-read \App\User $primary
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $secondaries
+ * @property-read int|null $secondaries_count
+ * @property-read \App\Models\MemberType $type
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereCreatorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereEnd($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereMemberTypeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member wherePrimaryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereStart($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Member whereUpdatedAt($value)
+ */
+	class Member extends \Eloquent {}
 }
 
 namespace App\Models{

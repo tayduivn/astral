@@ -13,7 +13,7 @@ class OrganizationType extends Model
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     /**
@@ -23,6 +23,6 @@ class OrganizationType extends Model
      */
     public function organizations()
     {
-      return $this->hasMany('App\Models\Organization', 'type_id');
+        return $this->hasMany('App\Models\Organization', 'type_id');
     }
 }

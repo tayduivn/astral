@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-Use \Illuminate\Support\Carbon;
+use \Illuminate\Support\Carbon;
 
 class GradesSeeder extends Seeder
 {
@@ -11,7 +11,7 @@ class GradesSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {
         // 1
         DB::table('grades')->insert([
           'name'           => 'Pre-K',

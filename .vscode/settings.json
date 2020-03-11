@@ -1,0 +1,6 @@
+{
+  "php-cs-fixer.executablePath": "${workspaceRoot}/vendor/friendsofphp/php-cs-fixer/php-cs-fixer",
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.rules": "@PSR2",
+  "php-cs-fixer.formatHtml": true,
+}

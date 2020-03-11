@@ -13,7 +13,7 @@ class Role extends Model
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     /**
@@ -23,6 +23,6 @@ class Role extends Model
      */
     public function permissions()
     {
-      return $this->hasOne('App\Models\RoleAccessControl');
+        return $this->hasOne('App\Models\RoleAccessControl');
     }
 }

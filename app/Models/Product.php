@@ -27,22 +27,22 @@ class Product extends Model
 
     /**
      * Gets the user who created a product.
-     * 
+     *
      * @return App\User
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     /**
      * Gets the type of a product
-     * 
+     *
      * @return App\Models\ProductType
      */
     public function type()
     {
-      return $this->belongsTo('App\Models\ProductType');
+        return $this->belongsTo('App\Models\ProductType');
     }
 
     /**
@@ -52,21 +52,20 @@ class Product extends Model
      */
     public function sales()
     {
-      return $this->belongsToMany('App\Models\Sale', 'sale_product', 'product_id', 'sale_id');
+        return $this->belongsToMany('App\Models\Sale', 'sale_product', 'product_id', 'sale_id');
     }
 
     /**
      * Gets the URL of the product cover.
-     * 
+     *
      * @param string $value
      * @return string
      */
     public function getCoverAttribute($value)
     {
-
-      $value = substr($value, 0, 4) == "/def"
+        $value = substr($value, 0, 4) == "/def"
                                       ? asset("$value")
                                       : asset("/storage/$value");
-      return $value;
+        return $value;
     }
 }

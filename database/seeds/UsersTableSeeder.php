@@ -12,10 +12,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-      $date = Carbon::createFromTimestampUTC(0)
+        $date = Carbon::createFromTimestampUTC(0)
         ->toDateTimeString();
-      // 1
-      DB::table('users')->insert([
+        // 1
+        DB::table('users')->insert([
         'firstname'       => 'Walk-up',
         'lastname'        => '',
         'email'           => 'walkup@walkup.com',
@@ -35,8 +35,8 @@ class UsersTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => $date,
       ]);
-      // 2
-      DB::table('users')->insert([
+        // 2
+        DB::table('users')->insert([
         'firstname'       => 'Mayborn Science Theater',
         'lastname'        => '',
         'email'           => 'planetarium@ctcd.edu',
@@ -56,8 +56,8 @@ class UsersTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => $date,
       ]);
-      // 3
-      DB::table('users')->insert([
+        // 3
+        DB::table('users')->insert([
         'firstname'       => 'Anderson',
         'lastname'        => 'Fernandes',
         'email'           => 'anderson.fernandes@ctcd.edu',
@@ -77,8 +77,8 @@ class UsersTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => $date,
       ]);
-      // 4
-      DB::table('users')->insert([
+        // 4
+        DB::table('users')->insert([
         'firstname'       => 'Central Texas College',
         'lastname'        => '',
         'email'           => 'contact@ctcd.edu',

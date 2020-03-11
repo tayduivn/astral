@@ -13,13 +13,11 @@ class AddPublicToEventTypesTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasTable('event_types'))
-        {
-          Schema::table('event_types', function (Blueprint $table) {
-            $table->boolean('public')->default(false);
-          });
+        if (Schema::hasTable('event_types')) {
+            Schema::table('event_types', function (Blueprint $table) {
+                $table->boolean('public')->default(false);
+            });
         }
-        
     }
 
     /**
@@ -29,11 +27,10 @@ class AddPublicToEventTypesTable extends Migration
      */
     public function down()
     {
-      if (Schema::hasTable('event_types'))
-      {
-        Schema::table('event_types', function (Blueprint $table) {
-          $table->dropColumn('public');
-        });
-      }
+        if (Schema::hasTable('event_types')) {
+            Schema::table('event_types', function (Blueprint $table) {
+                $table->dropColumn('public');
+            });
+        }
     }
 }

@@ -14,8 +14,8 @@ class AddOrganizationToTicketsTable extends Migration
     public function up()
     {
         Schema::table('tickets', function (Blueprint $table) {
-          $table->integer('organization_id')->unsigned()->default(1);
-          $table->foreign('organization_id')->references('id')->on('organizations');
+            $table->integer('organization_id')->unsigned()->default(1);
+            $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }
 
@@ -26,10 +26,10 @@ class AddOrganizationToTicketsTable extends Migration
      */
     public function down()
     {
-      if (Schema::hasTable('tickets')) {
-        Schema::table('tickets', function (Blueprint $table) {
-            $table->dropColumn('organization_id');
-        });
-      }
+        if (Schema::hasTable('tickets')) {
+            Schema::table('tickets', function (Blueprint $table) {
+                $table->dropColumn('organization_id');
+            });
+        }
     }
 }

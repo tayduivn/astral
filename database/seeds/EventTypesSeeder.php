@@ -12,11 +12,11 @@ class EventTypesSeeder extends Seeder
      */
     public function run()
     {
-      $date = Carbon::createFromTimestampUTC(0)
+        $date = Carbon::createFromTimestampUTC(0)
           ->toDateTimeString();
 
-      // System Type Event
-      DB::table('event_types')->insert([
+        // System Type Event
+        DB::table('event_types')->insert([
         'name'        => 'system',
         'description' => 'system',
         'creator_id'  => 1,
@@ -25,7 +25,7 @@ class EventTypesSeeder extends Seeder
         'created_at'  => $date,
       ]);
 
-      DB::table('event_types')->insert([
+        DB::table('event_types')->insert([
         'name'        => 'Matinee',
         'description' => 'Weekday shows with a single price for all ages',
         'creator_id'  => 1,
@@ -34,7 +34,7 @@ class EventTypesSeeder extends Seeder
         'created_at'  => $date,
       ]);
       
-      DB::table('event_types')->insert([
+        DB::table('event_types')->insert([
         'name'        => 'Weekend',
         'description' => 'Weekend shows',
         'creator_id'  => 1,
@@ -43,7 +43,7 @@ class EventTypesSeeder extends Seeder
         'created_at'  => $date,
       ]);
       
-      DB::table('event_types')->insert([
+        DB::table('event_types')->insert([
         'name'        => 'Special Event',
         'description' => 'Special Event',
         'creator_id'  => 1,
@@ -52,7 +52,7 @@ class EventTypesSeeder extends Seeder
         'created_at'  => $date,
       ]);
       
-      DB::table('event_types')->insert([
+        DB::table('event_types')->insert([
         'name'        => 'School Groups',
         'description' => 'School Groups',
         'creator_id'  => 1,

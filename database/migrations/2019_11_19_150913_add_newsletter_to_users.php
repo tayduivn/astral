@@ -6,27 +6,27 @@ use Illuminate\Database\Migrations\Migration;
 
 class AddNewsletterToUsers extends Migration
 {
-  /**
-   * Run the migrations.
-   *
-   * @return void
-   */
-  public function up()
-  {
-    Schema::table('users', function (Blueprint $table) {
-      $table->boolean('newsletter')->default(false);
-    });
-  }
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('newsletter')->default(false);
+        });
+    }
 
-  /**
-   * Reverse the migrations.
-   *
-   * @return void
-   */
-  public function down()
-  {
-    Schema::table('users', function (Blueprint $table) {
-      $table->dropColumn(['newsletter']);
-    });
-  }
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['newsletter']);
+        });
+    }
 }

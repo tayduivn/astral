@@ -13,11 +13,11 @@ class AddSellToOrganizationToSales extends Migration
      */
     public function up()
     {
-      if (Schema::hasTable('sales')) {
-        Schema::table('sales', function (Blueprint $table) {
-          $table->boolean('sell_to_organization')->default(true);
-        });
-      }
+        if (Schema::hasTable('sales')) {
+            Schema::table('sales', function (Blueprint $table) {
+                $table->boolean('sell_to_organization')->default(true);
+            });
+        }
     }
 
     /**
@@ -27,9 +27,10 @@ class AddSellToOrganizationToSales extends Migration
      */
     public function down()
     {
-      if (Schema::hasTable('sales'))
-        Schema::table('sales', function (Blueprint $table) {
-            $table->dropColumn('sell_to_organization');
-      });
+        if (Schema::hasTable('sales')) {
+            Schema::table('sales', function (Blueprint $table) {
+                $table->dropColumn('sell_to_organization');
+            });
+        }
     }
 }

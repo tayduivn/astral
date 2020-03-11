@@ -13,6 +13,6 @@ class PaymentMethod extends Model
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }

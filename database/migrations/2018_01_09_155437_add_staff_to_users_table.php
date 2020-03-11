@@ -14,9 +14,9 @@ class AddStaffToUsersTable extends Migration
     public function up()
     {
         if (Schema::hasTable('users')) {
-          Schema::table('users', function (Blueprint $table) {
-            $table->boolean('staff')->default(false);
-          });
+            Schema::table('users', function (Blueprint $table) {
+                $table->boolean('staff')->default(false);
+            });
         }
     }
 
@@ -27,9 +27,10 @@ class AddStaffToUsersTable extends Migration
      */
     public function down()
     {
-      if (Schema::hasTable('users'))
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('staff');
-        });
+        if (Schema::hasTable('users')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn('staff');
+            });
+        }
     }
 }

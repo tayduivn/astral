@@ -11,63 +11,63 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-      // 1
-      DB::table('roles')->insert([
+        // 1
+        DB::table('roles')->insert([
         'name'        => 'walk-up',
         'description' => 'Walk-up account.',
         'type'        => 'walk-up',
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 2
-      DB::table('roles')->insert([
+        // 2
+        DB::table('roles')->insert([
         'name'        => 'Senior Staff',
         'description' => 'Senior Staff accounts.',
         'type'        => 'individuals',
         'staff'       => true,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 3
-      DB::table('roles')->insert([
+        // 3
+        DB::table('roles')->insert([
         'name'        => 'Planetarium Lead Assistant',
         'description' => 'Planetarium Lead Assistant accounts.',
         'type'        => 'individuals',
         'staff'       => true,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 4
-      DB::table('roles')->insert([
+        // 4
+        DB::table('roles')->insert([
         'name'        => 'Planetarium Assistant',
         'description' => 'Planetarium Assistant accounts.',
         'type'        => 'individuals',
         'staff'       => true,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 5
-      DB::table('roles')->insert([
+        // 5
+        DB::table('roles')->insert([
         'name'        => 'Member',
         'description' => 'Member accounts',
         'type'        => 'members',
         'staff'       => false,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 6
-      DB::table('roles')->insert([
+        // 6
+        DB::table('roles')->insert([
         'name'        => 'Community College',
         'description' => 'Community College accounts.',
         'type'        => 'organizations',
         'staff'       => false,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 7
-      DB::table('roles')->insert([
+        // 7
+        DB::table('roles')->insert([
         'name'        => 'Visitor',
         'description' => 'Visitor accounts.',
         'type'        => 'individuals',
         'staff'       => false,
         'created_at'  => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 8
-      DB::table('roles')->insert([
+        // 8
+        DB::table('roles')->insert([
         'name'        => 'Teacher',
         'description' => 'Teacher accounts.',
         'type'        => 'individuals',

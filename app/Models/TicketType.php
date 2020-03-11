@@ -23,10 +23,12 @@ class TicketType extends Model
      */
     public function allowedEvents()
     {
-      return $this->belongsToMany('App\Models\EventType', 
-        'allowed_ticket_events', 
-        'ticket_type_id', 
-        'event_type_id');
+        return $this->belongsToMany(
+          'App\Models\EventType',
+          'allowed_ticket_events',
+          'ticket_type_id',
+          'event_type_id'
+      );
     }
 
     /**
@@ -36,6 +38,6 @@ class TicketType extends Model
      */
     public function creator()
     {
-      return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 }

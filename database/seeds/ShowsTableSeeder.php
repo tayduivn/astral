@@ -12,10 +12,10 @@ class ShowsTableSeeder extends Seeder
      */
     public function run()
     {
-      $date = Carbon::createFromTimestampUTC(0)
+        $date = Carbon::createFromTimestampUTC(0)
           ->toDateTimeString();
-      // Planetarium example show seed
-      DB::table('shows')->insert([
+        // Planetarium example show seed
+        DB::table('shows')->insert([
         'name'        => 'No Show',
         'type'        => 'system',
         'duration'    => 1,
@@ -27,8 +27,8 @@ class ShowsTableSeeder extends Seeder
         'created_at'  => $date,
         'updated_at'  => $date,
       ]);
-      // Planetarium example show seed
-      DB::table('shows')->insert([
+        // Planetarium example show seed
+        DB::table('shows')->insert([
         'name'        => 'Black Holes: The Other Side of Infinity',
         'type'        => 'Planetarium',
         'duration'    => 25,
@@ -41,8 +41,8 @@ class ShowsTableSeeder extends Seeder
         'updated_at'  => $date,
       ]);
 
-      // Laser Light example show seed
-      DB::table('shows')->insert([
+        // Laser Light example show seed
+        DB::table('shows')->insert([
         'name'        => 'Laser Daft Punk',
         'type'        => 'Laser Light',
         'duration'    => 45,

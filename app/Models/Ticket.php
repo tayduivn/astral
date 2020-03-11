@@ -23,7 +23,7 @@ class Ticket extends Model
      */
     public function sale()
     {
-      return $this->belongsTo('App\Models\Sale');
+        return $this->belongsTo('App\Models\Sale');
     }
 
     /**
@@ -33,7 +33,7 @@ class Ticket extends Model
      */
     public function event()
     {
-      return $this->belongsTo('App\Models\Event');
+        return $this->belongsTo('App\Models\Event');
     }
 
     /**
@@ -43,6 +43,6 @@ class Ticket extends Model
      */
     public function type()
     {
-      return $this->hasOne('App\Models\TicketType', 'id', 'ticket_type_id');
+        return $this->hasOne('App\Models\TicketType', 'id', 'ticket_type_id');
     }
 }

@@ -12,7 +12,6 @@ class OrganizationTypesTableSeeder extends Seeder
      */
     public function run()
     {
-
         $date = Carbon::createFromTimestampUTC(0)
           ->toDateTimeString();
 

@@ -25,11 +25,10 @@ class AddPublicToEventsTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('events'))
-        {
-          Schema::table('events', function (Blueprint $table) {
-              $table->dropColumn('public');
-          });
+        if (Schema::hasTable('events')) {
+            Schema::table('events', function (Blueprint $table) {
+                $table->dropColumn('public');
+            });
         }
     }
 }

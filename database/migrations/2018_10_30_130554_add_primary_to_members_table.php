@@ -14,7 +14,7 @@ class AddPrimaryToMembersTable extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-          $table->integer('primary_id')->unsigned()->default(1);
+            $table->integer('primary_id')->unsigned()->default(1);
         });
     }
 

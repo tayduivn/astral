@@ -14,10 +14,10 @@ class AddInvoiceAndConfirmationTextToSettings extends Migration
     public function up()
     {
         if (Schema::hasTable('settings')) {
-          Schema::table('settings', function (Blueprint $table) {
-            $table->string('confirmation_text')->nullable();
-            $table->string('invoice_text')->nullable();
-          });
+            Schema::table('settings', function (Blueprint $table) {
+                $table->string('confirmation_text')->nullable();
+                $table->string('invoice_text')->nullable();
+            });
         }
     }
 
@@ -28,10 +28,11 @@ class AddInvoiceAndConfirmationTextToSettings extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('settings'))
-          Schema::table('settings', function (Blueprint $table) {
-              $table->dropColumn('confirmation_text');
-              $table->dropColumn('invoice_text');
-        });
+        if (Schema::hasTable('settings')) {
+            Schema::table('settings', function (Blueprint $table) {
+                $table->dropColumn('confirmation_text');
+                $table->dropColumn('invoice_text');
+            });
+        }
     }
 }

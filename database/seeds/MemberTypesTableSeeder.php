@@ -12,8 +12,8 @@ class MemberTypesTableSeeder extends Seeder
      */
     public function run()
     {
-      // 1
-      DB::table('member_types')->insert([
+        // 1
+        DB::table('member_types')->insert([
         'name'            => 'No Membership',
         'description'     => 'No membership',
         'price'           => 0,
@@ -23,8 +23,8 @@ class MemberTypesTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 1
-      DB::table('member_types')->insert([
+        // 1
+        DB::table('member_types')->insert([
         'name'            => 'Individual Membership',
         'description'     => 'Individual Membership',
         'price'           => 50,
@@ -34,8 +34,8 @@ class MemberTypesTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 2
-      DB::table('member_types')->insert([
+        // 2
+        DB::table('member_types')->insert([
         'name'            => 'Family Membership',
         'description'     => 'Family Membership',
         'price'           => 100,
@@ -45,8 +45,8 @@ class MemberTypesTableSeeder extends Seeder
         'creator_id'      => 1,
         'created_at'      => now(config('app.timezone'))->toDateTimeString(),
       ]);
-      // 3
-      DB::table('member_types')->insert([
+        // 3
+        DB::table('member_types')->insert([
         'name'            => 'Sponsor Membership',
         'description'     => 'Sponsor Membership',
         'price'           => 135,
