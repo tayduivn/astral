@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class TicketType extends Model
 {
     /**
-     * [$casts description]
+     * The attributes that should be cast.
      *
      * @var [type]
      */
@@ -17,7 +17,7 @@ class TicketType extends Model
     ];
     
     /**
-     * Returns allowed event types for this ticket type
+     * Gets the allowed event types for a ticket type.
      *
      * @return array
      */
@@ -30,9 +30,9 @@ class TicketType extends Model
     }
 
     /**
-     * Returns creator of this ticket type
+     * Gets the user who created a ticket type.
      *
-     * @return  \App\User  Returns the user who created this record
+     * @return  \App\User
      */
     public function creator()
     {
