@@ -13,17 +13,17 @@ class CategoryTableSeeder extends Seeder
     {
         // 1
         DB::table('categories')->insert([
-          'name'        => 'announcements',
-          'description' => 'Staff announcements.',
-          'creator_id'  => 2,
-          'created_at'  => now(config('app.timezone')),
+            'name'        => 'announcements',
+            'description' => 'Staff announcements.',
+            'creator_id'  => 2,
+            'created_at'  => now(config('app.timezone')),
         ]);
         // 2
         DB::table('categories')->insert([
-          'name'        => 'bugs',
-          'description' => 'All Astral bugs should be posted under this category.',
-          'creator_id'  => 2,
-          'created_at'  => now(config('app.timezone')),
+            'name'        => 'bugs',
+            'description' => 'All Astral bugs should be posted under this category.',
+            'creator_id'  => 2,
+            'created_at'  => now(config('app.timezone')),
         ]);
     }
 }
